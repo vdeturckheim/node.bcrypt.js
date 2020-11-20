@@ -18,3 +18,7 @@ jobs:
           node-version: '14'
       - name: npm test
         run: npm test
+      - uses: actions/upload-artifact@v2
+        with:
+          name: bcrypt_lib-${{ matrix.platform }}
+          path: lib/binding/napi-v3/bcrypt_lib.node
